@@ -57,8 +57,60 @@
 <div class="col-md-3">
   <a href="/signalLight" class="btn btn-default btn-lg btn-block" target="command">SignalLight</a>
 </div>
+<div class="col-md-3">
+  <a href="/wave" class="btn btn-default btn-lg btn-block" target="command">Wave</a>
+</div>
   </div>
 </div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Animate String</h3>
+  </div>
+  <div class="panel-body">
+<form action="/string" target="command" method="get" class="form-inline">
+  <div class="form-group col-md-4">
+    <label>String to animate </label>
+    <input type="text" class="form-control" name="text" placeholder="Enter String">
+  </div>
+
+<div class="form-group col-md-4">
+  <label>Delay </label>
+    <input type="number" class="form-control" value="50" min="0" max="1000" name="delay">
+  </div>
+
+  <div class="form-group col-md-4">
+  <button type="submit" class="btn btn-default btn-block">Play</button>
+</div>
+</form>
+  </div>
+</div>
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Rain</h3>
+  </div>
+  <div class="panel-body">
+<form action="/rain" target="command" method="get" class="form-inline">
+  <div class="form-group col-md-4">
+    <label>Max rain drops per level </label>
+    <input type="number" class="form-control" value="5" min="1" max="64" name="drops">
+  </div>
+
+<div class="form-group col-md-4">
+  <label>Delay </label>
+    <input type="number" class="form-control" value="50" min="0" max="100" name="delay">
+  </div>
+
+  <div class="form-group col-md-4">
+  <button type="submit" class="btn btn-default btn-block">Play</button>
+</div>
+</form>
+  </div>
+</div>
+
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">tomazas Examples</h3>
@@ -156,22 +208,30 @@
 
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Animate String</h3>
+    <h3 class="panel-title">Wi-Fi & Adafruit Settings</h3>
   </div>
   <div class="panel-body">
-<form action="/string" target="command" method="get" class="form-inline">
+<form action="/config" target="command" method="get" class="form-inline">
   <div class="form-group col-md-4">
-    <label>String to animate</label>
-    <input type="text" class="form-control" name="text" placeholder="Enter String">
+    <label>SSID</label>
+    <input type="text" class="form-control" name="ssid" placeholder="Enter SIID">
   </div>
 
 <div class="form-group col-md-4">
-	<label>Delay</label>
-    <input type="number" class="form-control" value="5" min="0" max="50" name="delay">
+  <label>Password</label>
+    <input type="password" class="form-control" name="psk" placeholder="Enter Password">
+  </div>
+<!--   <div class="form-group col-md-4">
+    <label>Adafruit User Name</label>
+    <input type="text" class="form-control" name="username" placeholder="Enter Username">
   </div>
 
+<div class="form-group col-md-4">
+  <label>Adafruit KEY</label>
+    <input type="password" class="form-control" name="key" placeholder="Enter Key">
+  </div> -->
   <div class="form-group col-md-4">
-  <button type="submit" class="btn btn-default btn-block">Submit</button>
+  <button type="submit" class="btn btn-default btn-block">Update</button>
 </div>
 </form>
   </div>

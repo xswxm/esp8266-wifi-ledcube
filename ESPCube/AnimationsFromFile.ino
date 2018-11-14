@@ -7,7 +7,6 @@ void doAnimationFromFile(String filename) {
     file = SPIFFS.open(filename, "r");
     doAnimationStepFromFile();
   }
-
 }
 
 void doAnimationStepFromFile() {
@@ -30,4 +29,3 @@ void doAnimationStepFromFile() {
 void doExample() {
   doAnimationFromFile(String("/examples/") + currentExample + String(".dat"));
 }
-
