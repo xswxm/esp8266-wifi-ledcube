@@ -320,11 +320,16 @@ void doRain(int maxRaindropsPerLevel, int rainDelay) {
       {0,0,0,0,0,0,0,0},
       {0,0,0,0,0,0,0,0}
       };
+  if (maxRaindropsPerLevel <= 0) {
+    maxRaindropsPerLevel = 1;
+  } else if (maxRaindropsPerLevel >= 64) {
+    maxRaindropsPerLevel = 63;
+  }
   int n = 0, maxDrops = maxRaindropsPerLevel, val = 1;
   if (maxRaindropsPerLevel > 32) {
       maxDrops = 64 - maxRaindropsPerLevel;
       val = 0;
-    }
+  }
   while (n < maxDrops) {
     int x = random(0,8), y = random(0,8);
     if (level[x][y] != val) {

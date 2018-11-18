@@ -31,8 +31,8 @@ animation currentAnimation = wave;
 String currentExample;
 String currentlyAnimatedString;
 int currentStringDelay;
-int maxRaindropsPerLevel= 5;
-int rainDelay = 50;
+int maxRaindropsPerLevel= 3;
+int rainDelay = 0;
 bool cycleAll = false;
 
 #define FACTORY_RESET 0  // Reset button
@@ -273,6 +273,8 @@ void loop ( void ) {
         currentAnimation = off;
       else if (str == "wave")
         currentAnimation = wave;
+      else if (str == "rain")
+        currentAnimation = rain;
       else if (str == "fence")
         currentAnimation = fence;
       else if (str == "tower")
